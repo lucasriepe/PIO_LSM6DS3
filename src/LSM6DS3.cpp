@@ -6,7 +6,6 @@
 
 LSM6DS3Class::LSM6DS3Class(TwoWire& wire, uint8_t slaveAddress) :
   _wire(&wire),
-  _spi(NULL),
   _slaveAddress(slaveAddress)
 {
 }
