@@ -1,0 +1,5 @@
+{
+  "type": "library",
+  "name": "PIO_LSM6DS3",
+  "version": "0.1.0"
+}
