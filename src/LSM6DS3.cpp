@@ -42,15 +42,9 @@ int LSM6DS3Class::begin()
 
 void LSM6DS3Class::end()
 {
-  if (_spi != NULL) {
-    _spi->end();
-    digitalWrite(_csPin, LOW);
-    pinMode(_csPin, INPUT);
-  } else {
-    writeRegister(LSM6DS3_CTRL2_G, 0x00);
-    writeRegister(LSM6DS3_CTRL1_XL, 0x00);
-    _wire->end();
-  }
+  writeRegister(LSM6DS3_CTRL2_G, 0x00);
+  writeRegister(LSM6DS3_CTRL1_XL, 0x00);
+  _wire->end();
 }
 
 int LSM6DS3Class::readAcceleration(float& x, float& y, float& z)
